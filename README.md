@@ -18,4 +18,4 @@ to deal with the HTTP networking protocol.
 
 ## Loading into gemstone
 
-You'll also need to load the SocketStream port from the PharoCompat repository here: http://seaside.gemstone.com/ss/PharoCompat
+You should first load the SocketStream port from the PharoCompat repository here: http://seaside.gemstone.com/ss/PharoCompat
