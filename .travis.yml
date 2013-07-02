@@ -12,7 +12,6 @@ env:
 branches:
   except:
     - master
-    - kentreis
 
 install:
    - export PROJECT_HOME="$(pwd)"
