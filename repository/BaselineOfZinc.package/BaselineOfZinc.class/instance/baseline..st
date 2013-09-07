@@ -26,7 +26,7 @@ baseline: spec
 			package: 'Zinc-Patch-HTTPSocket' with: [ spec requires: 'Zinc-HTTP' ];
 			package: 'Zinc-AWS' with: [ spec requires: #( 'Zinc-HTTP' 'XML Support' ) ];
 			package: 'Zinc-REST' with: [ spec requires: #( 'Zinc-HTTP' 'Neo JSON' ) ];
-			package: 'Zinc-Zodiac' with: [ spec requires: #( 'Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests' ) ];
+		"	package: 'Zinc-Zodiac' with: [ spec requires: #( 'Zinc-HTTP' 'Zodiac-Core' 'Zodiac-Tests' ) ];"
 			package: 'Zinc-WebSocket-Core' with: [ spec requires: 'Zinc-HTTP' ];
 			package: 'Zinc-WebSocket-Tests' with: [ spec requires: 'Zinc-WebSocket-Core' ];
 			package: 'Zinc-SSO-OAuth1-Core' with: [ spec requires: #( 'Zinc-HTTP' 'Neo JSON' ) ];
