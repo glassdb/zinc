@@ -1,14 +1,15 @@
 {
-	"category" : "BaselineOfZinc",
+	"category" : "SocketStream",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "BaselineOfZinc",
+		"clientStream",
+		"serverStream" ],
+	"name" : "SocketStreamTest",
 	"pools" : [
 		 ],
-	"super" : "BaselineOf",
+	"super" : "TestCase",
 	"type" : "normal" }
