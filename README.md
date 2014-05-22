@@ -16,25 +16,33 @@ to deal with the HTTP networking protocol.
 
 [MIT Licensed](https://github.com/svenvc/zinc/blob/master/license.txt)
 
-## Loading into GemStone 2.4.x
+## Installation
 
-1. [Upgrade to GLASS 1.0-beta.9](http://code.google.com/p/glassdb/wiki/GemToolsUpdate#Update_GLASS)
-2. Install Metacello Preview:
+```Smalltalk
+run
+ConfigurationOfGLASS project updateProject.
+GsDeployer deploy: [ 
 
-    ```Smalltalk
-    Metacello new
-      configuration: 'MetacelloPreview';
-      version: #stable;
-      repository: 'github://dalehenrich/metacello-work:configuration';
-      load.
-    ```
+  "Upgrade to GLASS 1.0-beta.9.1"
+  (ConfigurationOfGLASS project version: '1.0-beta.9.1') load].
+%
+commit
 
-3. Install Zinc:
+run
+GsDeployer deploy: [ 
 
-    ```Smalltalk
-    Metacello new
-      baseline: 'Zinc';
-	  repository: 'github://glassdb/zinc:gemstone2.4/repository';
-	  load: 'Tests'.
-    ```
+  "Load latest GLASS1 from github"
+  Metacello new
+    baseline: 'GLASS1';
+    repository: 'github://glassdb/glass:master/repository';
+    load.
+
+  "Load Zinc"
+  Metacello new
+    baseline: 'Zinc';
+    repository: 'github://glassdb/zinc:gemstone2.4/repository';
+    load ].
+%
+commit
+```
 
