@@ -4,4 +4,3 @@ extendHeaderAt: key from: line
 	keeping the whitespace, but without the CRLF"
 	
 	self at: key put: (self at: key), line
-	
