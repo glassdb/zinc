@@ -3,11 +3,18 @@
 Transcript cr; show: 'travis---->travisCI.st'.
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"Load Tode ... "
+"Load latest GLASS1 from github"
 Metacello new
-	baseline: 'Zinc';
+  baseline: 'GLASS1';
+  repository: 'github://glassdb/glass:master/repository';
+  load.
+
+
+"Load Zinc... "
+Metacello new
+  baseline: 'Zinc';
   repository: 'filetree://', gitPath, '/zinc/repository';
-  load: #('Tests' 'default').
+  load: #('Tests' 'Core').
 
 "Run the Tode tests"
 TravisCIHarness
