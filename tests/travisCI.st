@@ -17,6 +17,9 @@ Metacello new
 Metacello new
   baseline: 'Zinc';
   repository: 'filetree://', gitPath, '/zinc/repository';
+  onWarning: [:ex |
+    Transcript cr; show: ex description.
+    ex resume ];
   load: #('Tests' 'Core').
 
 "Run the Tode tests"
