@@ -40,9 +40,13 @@ GsDeployer deploy: [
   "Load Zinc"
   Metacello new
     baseline: 'Zinc';
-    repository: 'github://glassdb/zinc:gemstone2.4/repository';
+    repository: 'github://glassdb/zinc:gemstone3.1/repository';
     load ].
 %
 commit
 ```
 
+## Travis Status
+
+**GemStone3.1.x** [![Build Status](https://travis-ci.org/glassdb/zinc.png?branch=gemstone3.1)](https://travis-ci.org/glassdb/zinc)
+~
