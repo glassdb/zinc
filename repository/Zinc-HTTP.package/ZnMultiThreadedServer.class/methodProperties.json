@@ -6,7 +6,7 @@
 		"exceptionSet:" : "SvenVanCaekenberghe 10/4/2011 09:46",
 		"executeOneRequestResponseOn:" : "SvenVanCaekenberghe 1/10/2013 15:06",
 		"executeRequestResponseLoopOn:" : "SvenVanCaekenberghe 1/10/2013 15:08",
-		"handleError:" : "dkh 06/05/2014 18:33",
+		"handleError:" : "dkh 06/05/2014 19:25",
 		"listenLoop" : "SvenVanCaekenberghe 12/10/2010 16:00",
 		"notifyUnreportableError:" : "dkh 06/05/2014 18:20",
 		"readRequestExceptionSet" : "SvenVanCaekenberghe 1/10/2013 15:22",

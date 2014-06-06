@@ -1,22 +1,17 @@
 private
 handleError: anException
   [ 
-  | messageText data stream |
+  | messageText data |
   "Handle different argument arrangements (probably introduced in 2.3.2)"
   messageText := anException messageText.
   data := messageText isNil
     ifTrue: [ anException description ]
     ifFalse: [ messageText ].
-  stream := WriteStream on: String new.
-  stream
-    cr;
-    nextPutAll: anException description;
-    cr;
-    nextPutAll: '---' , Time now printString;
-    cr;
-    nextPutAll: (GsProcess stackReportToLevel: 100);
-    cr;
-    yourself.
-  GsFile gciLogServer: stream contents ]
+  GsFile
+    gciLogServer:
+      '------INTERNAL ZINC ERROR: ' , Time now printString , '------'.
+  GsFile gciLogServer: anException description.
+  GsFile gciLogServer: (GsProcess stackReportToLevel: 100).
+  GsFile gciLogServer: '------' ]
     on: Error
     do: [ :e | self notifyUnreportableError: anException description ]
